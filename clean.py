@@ -268,4 +268,5 @@ def check_status_score():
     return status, score
 
 status, score = check_status_score()
-print(status, score)
+
+print("{} ({})".format(status, score))
