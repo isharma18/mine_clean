@@ -137,7 +137,7 @@ def is_mine_visible():
         for j, c in enumerate(r):
             if c != ".":
                 mine_visible = True
-
+                break
     return mine_visible
 
 
@@ -147,6 +147,7 @@ def is_mine_missed():
         for j, c in enumerate(r):
             if c != "." and c != "*":
                 missed = False
+                break
     return missed
 
 
@@ -160,7 +161,7 @@ fire_count = 0
 
 for command in script:
     if is_mine_missed():
-        continue
+        break
     print("Step {}".format(command_count))
     actions = command.split(" ")
     print("\n")
